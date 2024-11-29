@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+	
+	    <meta charset="utf-8">
+    
+        <meta name="robots" content="index,follow">
+
+	    <meta name="description" content="Dentista Luna-Málaga.¿Necesitas un dentista profesional?,llamanos!!952323256, Urgencias 952366969.Estamos a tu disposición, no lo dudes tu salud es lo más importante, cuida tus dientes.">
+
+	    <meta name="keywords" content="Odontólogo general,Odontopediatra,Periodoncista,Cirujano Oral">
+
+	    <meta name="revisit after" content="7 days">
+    
+        <meta name="category" content="Dentista General">
+        
+        <title>Odontologia Luna</title>
+        
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="icon" href="../favicon.ico" type="image/png">
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Indie+Flower&display=swap" rel="stylesheet"> 
+        
+	
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <h1 class="web-name left">Odontologia</h1>
+                <img src="../assets/img/luna_favicon.png" alt="imagen de una luna" class="logotipo">
+                <h1 class="web-name right">Luna</h1> 
+            </div>
+        </header>
+        <nav class="sticky">
+            <a href="../index.html" target="_self">Inicio</a>
+            <a href="./galeria.html" target="_self">Galería</a>
+            <a href="#" target="_self" class="selected-menu">Presupuestos</a>
+            <a href="./contactos.html" target="_self">Contacto</a>
+        </nav>
+        <main>
+            <section class="budget-content">
+                <h2>Tu Presupuesto</h2>
+                <p>Indiquenos su idea o el tratamiento que quiera recibir, con cualquier duda o si nenesita de nuestra orinentación para 
+                    nuestro servicio de odontologia llamenos.</p>
+                <form class="presupuestoForm" id="presupuestoForm" action="procesar.php" method="post">
+                    <fieldset class="form-control">
+                        <legend>Datos personales</legend>
+                        <div class="form-Section">
+                            <label for="fname">Nombre</label>
+                            <input type="text" placeholder="Escribe tu Nombre..." name="fname" id="fname" required>
+                            <small>ERROR MENSAJE</small>
+                        </div>
+                        <div class="form-Section">
+                            <label for="fsurname">Apellidos</label>
+                            <input type="text" placeholder="Escribe tus Apellidos..." name="fsurname" id="fsurname" required>
+                            <small>ERROR MENSAJE</small>
+                        </div>
+                        <div class="form-Section">
+                            <label for="fphone">Teléfono</label>
+                            <input type="tel" placeholder="Escribe tu Teléfono..." name="fphone" id="fphone" required>
+                            <small>ERROR MENSAJE</small>
+                        </div>
+                        <div class="form-Section">
+                            <label for="femail">Email</label>
+                            <input type="email" placeholder="Escribe tu Email..." name="femail" id="femail" required>
+                            <small>ERROR MENSAJE</small>                        
+                        </div>
+                        <p>(*)Los campos marcados con asterisco son obligatorios.</p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Presupuesto</legend>
+                        <div class="conteiner-flex">
+                            <div class="form-Section" class="margin-10">
+                                <label for="fproject">Que deseas para su presupuesto:</label>
+                                <select name="fproject" id="fproject">
+                                    <option value="-">Seleccionar</option>
+                                    <option value="30">Revisión</option>
+                                    <option value="50">Limpieza dental</option>
+                                    <option value="120">Blanqueamiento</option>
+                                    <option value="otros">Otros servicios..</option>
+                                </select>
+                            </div>
+                            <div class="form-Section">
+                                <textarea id="text-area">Que otro servicio desea...</textarea>
+                            </div>
+                        </div>
+
+                        <div class="conteiner-flex">
+                            <div class="form-Section">
+                                <label for="fappointment">Plazo de cita:</label>
+                                <select name="fappointment" id="fappointment">
+                                    <option value="-">Seleccionar</option>
+                                    <option value="0">De inmediato(1 o 2 semanas)</option>
+                                    <option value="2.50">3 meses</option>
+                                    <option value="5.00">6 meses</option>
+                                </select>
+                            </div>
+                            <div class="form-Section">
+                                <input type="radio" name="fextras" value="infantil" id="infantil">
+                                <label for="infantil">Odontologia infantil</label>
+                            </div>
+                            <div class="form-Section">
+                                <input type="radio" name="fextras" value= "adulto" id="adulto" checked>
+                                <label for="adulto">Odontologia adultos</label>
+                            </div>
+                            <div class="style-calculate" >
+                                <span id="calculate">mensaje</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Aceptación de condiciones y envio del formulario</legend>
+                        <div class="form-Section">
+                            <label for="fterms">Acepto los términos y condiciones y la política de privacidad de la empresa.</label>
+                            <input type="checkbox" name="fterms" id="fterms">
+                            <small class="terms">ERROR MENSAJE</small>
+                        </div>
+                        <div class="form-Section">
+                            <button type="submit" id="enviar" value="Enviar">Enviar</button>
+                            <button type="reset" id="borrar" value="Borrar">Borrar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer class="content-section">
+            <section class="first">
+                <h2>Calidad Garantizada</h2>
+                <div class="logo-content left">
+                    <p>Calidad certificada</p>
+                    <img src="../assets/img/calidad.png" alt="logo de calidad" class="logos">
+                </div>
+                <div class="logo-content center">
+                    <p>última tecnologías</p>
+                    <img src="../assets/img/tecnology1.png" alt="logo de calidad" class="logos">
+                </div>
+                <div class="logo-content right">
+                    <p>Profesionales especializados</p>
+                     <img src="../assets/img/diploma.png" alt="logo de calidad" class="logos">
+                </div>
+            </section>
+            <section class="second content-aside">
+                <h2>Contacta con nosotros</h2>
+                <aside class="aside-first">
+                    <h3>¿Necesitas información?</h3>
+                    <a href="../wiews/contactos.html" target="_self">contacta con nosotros</a>
+                    <p><span>llámanos</span><br>+34952323256<br>+34652252523</p>
+                    <p><span>Horario</span><br>9:30 a 13:30<br>16:30 a 20:30</p>
+                    <p><span>Visítanos</span><br>Avda.Pablo Ruiz Picaso,71.29670</p>
+                </aside>
+                <aside class="aside-second">
+                    <div class="sociales">
+                        <div>
+                            <img src="../assets/img/logo_whatsapp.png" alt="Whatsapp">
+                        </div>
+                        <div class="name-logo">
+                            <p>Whatsapp</p>
+                        </div>
+                    </div>
+                    <div class="sociales">
+                        <div>
+                            <img src="../assets/img/logo_faceboock.png" alt="faceboock">
+                        </div>
+                        <div class="name-logo">
+                            <p>Facebook</p>
+                        </div>
+                    </div>
+                    <div class="sociales">
+                        <div>
+                            <img src="../assets/img/logo_instagram.png" alt="Instagram">
+                        </div>
+                        <div class="name-logo">
+                            <p>Instagram</p>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <div class="footer">
+                <p>Aviso legal - Polílitica de Privacidad - Politica de Cookies<br>Odontologia Luna.2022.<br>Diseño:chemamp</p>
+            </div>
+        </footer>
+        <script src="../script/js_presupuesto.js"></script>
+	</body>
+
+</HTML>
+
